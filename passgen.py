@@ -18,7 +18,9 @@ if inputs == "y":
     if websiteask == "n":
         print("your password is:", password)
     saves = input("save?")
-if saves == "n":
+if saves == "n" and websiteask == "y":
+    input("press enter to exit")
+if saves == "n" and websiteask == "n":
     input("press enter to exit")
 if saves == "y" and websiteask == "y":
     f = open("pass.txt", "w")
