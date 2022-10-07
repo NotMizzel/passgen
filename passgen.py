@@ -46,14 +46,14 @@ if menu == "3":
         websiteask = input("website?: ")
         if websiteask == "n":
             print("ok")
-            password = input("enter your password")
+            print("your password is:", password)
         if websiteask == "y":
             websitein = input("website name: ")
             print("Your website is", websitein, "your password is:", password)
         if websiteask == "n":
             print("your password is:", password)
         saves = input("save?")
-    if saves == "y" and websiteask == "y":
+    if websiteask == "y" and saves == "y" :
         f = open("pass.txt", "a")
         f.write("website name: ")
         f.write(websitein)
@@ -62,14 +62,14 @@ if menu == "3":
         f.write(password)
         f.write("\n\n")
         f.close()
-    print("your website and password text file have been saved in the folder where you have this program located")
+    print("your password text file has been saved in the folder where you have this program located")
     if saves == "y" and websiteask == "n":
         f = open("pass.txt", "a")
         f.write("password: ")
         f.write(password)
         f.write("\n\n")
         f.close()
-        print("your password text file has been saved in the folder where you have this program located")
+        print("your password text file has been saved in the folder where you have this program located2")
         input("press enter to exit")
 if menu == "2":
     fe = os.path.exists('pass.txt')
